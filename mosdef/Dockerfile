@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM continuumio/miniconda3:4.7.12-alpine
 
 RUN apt-get update -y \
     && apt-get clean -y
