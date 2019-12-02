@@ -1,7 +1,11 @@
 FROM continuumio/miniconda3:4.7.12-alpine
 
-RUN apt-get update -y \
-    && apt-get clean -y
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV PATH /opt/conda/bin:$PATH
+ENV MOSDEF https://github.com/mosdef-hub
+ENV PY_VER 3.7
+
+USER anaconda
 
 RUN conda config --set always_yes yes --set changeps1 no
 
